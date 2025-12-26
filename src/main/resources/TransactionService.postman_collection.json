@@ -1,0 +1,71 @@
+{
+  "info": {
+    "_postman_id": "transaction-service-collection-001",
+    "name": "Transaction Service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Colección de endpoints para el microservicio transaction-service"
+  },
+  "item": [
+    {
+      "name": "Crear Transacción",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{jwt_token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"accountFrom\": \"1234567890\",\n  \"accountTo\": \"0987654321\",\n  \"amount\": 100.50,\n  \"description\": \"Transferencia de prueba\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9083/transactions",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9083",
+          "path": ["transactions"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener Transacción por ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt_token}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:9083/transactions/{{transaction_id}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9083",
+          "path": ["transactions", "{{transaction_id}}"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Todas las Transacciones",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt_token}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:9083/transactions",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9083",
+          "path": ["transactions"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    { "key": "jwt_token", "value": "" },
+    { "key": "transaction_id", "value": "" }
+  ]
+}
+
