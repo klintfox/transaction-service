@@ -149,6 +149,6 @@ GET /transactions/{id}
 
 ![Failed Transaction Kafka](https://github.com/klintfox/account-service/blob/master/src/main/resources/evidencias/7.PNG)
 
-![Databse Transactions](https://github.com/klintfox/account-service/blob/master/src/main/resources/evidencias/8.PNG)
+![Database Transactions](https://github.com/klintfox/account-service/blob/master/src/main/resources/evidencias/8.PNG)
 
-![Consumer from Account-Service And Save Data](https://github.com/klintfox/account-service/blob/master/src/main/resources/evidencias/9.PNG)
+![Consumer from Account](https://github.com/klintfox/account-service/blob/master/src/main/resources/evidencias/9.PNG)
